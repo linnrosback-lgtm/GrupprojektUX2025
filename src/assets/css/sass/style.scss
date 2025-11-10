@@ -11,7 +11,7 @@ Version: 1.0
 
 html {
   width: 100%;
-  margin:0;
+  margin: 0;
   border-top: 2px solid $link-hover;
 }
 
@@ -21,33 +21,33 @@ body {
   display: block;
   clear: both;
   padding: 0;
-  margin:0px auto;
+  margin: 0px auto;
   box-sizing: border-box;
-	font-family:$primary-font;
-	font-size:13pt;
-	color:black;
+  font-family: $primary-font;
+  font-size: 13pt;
+  color: black;
 }
 
-@media screen and (max-width : 1024px) {
+@media screen and (max-width: 1024px) {
+  /*All Devices*/
 
-	/*All Devices*/
+  html.touch *:hover {
+    pointer-events: none !important;
+  }
 
-	html.touch *:hover {
-    	pointer-events: none !important;
-	}
+  html,
+  body {
+    width: 100% !important;
+    margin: 0px !important;
+    overflow-x: hidden !important;
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+  }
 
-	html, body {
-		width:100% !important;
-		margin:0px !important;
-		overflow-x:hidden !important;
-		-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
-	}
-
-	body {
-		margin: 0 0 20px;
-		height:auto;
-		min-height:100%;
-	}
+  body {
+    margin: 0 0 20px;
+    height: auto;
+    min-height: 100%;
+  }
 }
 
 #content {
@@ -58,12 +58,45 @@ body {
 }
 
 .hero-img {
-	width: 100%;
-	max-height: 387px;
+  width: 100%;
+  max-height: 387px;
+}
+
+/*----Personkort grid----*/
+
+.team-section {
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .staff-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    text-align: start;
+    justify-items: center;
+    align-items: start;
+
+    article {
+      max-width: 180px;
+
+      img {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+      }
+      h2 {
+        margin-bottom: 0rem;
+      }
+    }
+  }
 }
 
 /*------FOOTER-----*/
 
 #footer {
-	width: 100%;
+  width: 100%;
 }
