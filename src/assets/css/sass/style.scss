@@ -42,7 +42,7 @@ body {
   flex-wrap: $wrap;
   justify-content: $justify;
   padding: $padding;
-  gap: 1rem; // optional, adds spacing between items
+  gap: 2rem;
 }
 
 .contact-container {
@@ -56,6 +56,7 @@ body {
     font-style: normal; // reset default italics
     h3 {
       font-style: normal;
+      padding-bottom: 1rem;
     }
   }
 }
