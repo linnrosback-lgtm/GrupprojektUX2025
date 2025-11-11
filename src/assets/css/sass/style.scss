@@ -28,6 +28,38 @@ body {
   color: black;
 }
 
+/*----contact heading using mixing ----*/
+// CAN ALSO BE USED IN FOOTER
+
+@mixin flex-container(
+  $direction: row,
+  $wrap: wrap,
+  $justify: space-between,
+  $padding: 2rem
+) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  padding: $padding;
+  gap: 1rem; // optional, adds spacing between items
+}
+
+.contact-container {
+  @include flex-container(column, nowrap, space-between, 50px);
+
+  .quick-facts {
+    @include flex-container(row, wrap, space-between, 0);
+  }
+
+  address {
+    font-style: normal; // reset default italics
+    h3 {
+      font-style: normal;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   /*All Devices*/
 
@@ -121,23 +153,22 @@ footer {
   min-height: 10rem;
   display: flex;
   justify-content: space-between;
-  padding: 2rem clamp(1rem, 5vw, 4rem); 
+  padding: 2rem clamp(1rem, 5vw, 4rem);
   border-top: 1px solid black;
   flex-wrap: wrap;
 
-   div {
-      flex: 1;          // keeps equal widths
-      min-width: 240px;
-      padding-top: 1rem;
+  div {
+    flex: 1; // keeps equal widths
+    min-width: 240px;
+    padding-top: 1rem;
 
-      h3 {
-        padding-bottom: 1rem;
-      }
-
-      a {
-        @extend .paragraph;
-        color: black !important;
-      }
-
+    h3 {
+      padding-bottom: 1rem;
     }
+
+    a {
+      @extend .paragraph;
+      color: black !important;
+    }
+  }
 }
