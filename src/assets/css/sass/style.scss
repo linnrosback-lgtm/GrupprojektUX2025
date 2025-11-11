@@ -65,7 +65,7 @@ body {
 /*----Personkort grid----*/
 
 .team-section {
-  padding: 20px;
+  padding: 50px;
 
   h2 {
     margin-bottom: 2rem;
@@ -88,9 +88,28 @@ body {
         height: 290px;
         object-fit: cover;
       }
+
       h2 {
         margin-bottom: 0rem;
       }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .staff-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .staff-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .staff-grid {
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -99,22 +118,26 @@ body {
 
 footer {
   width: 100%;
+  min-height: 10rem;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 8vw;
+  padding: 2rem clamp(1rem, 5vw, 4rem); 
   border-top: 1px solid black;
+  flex-wrap: wrap;
 
    div {
-    	flex: 1;                  // makes each footer div take equal width (optional)
-      height: 9rem;
+      flex: 1;          // keeps equal widths
+      min-width: 240px;
       padding-top: 1rem;
 
-      h2 {
+      h3 {
         padding-bottom: 1rem;
       }
 
       a {
-        color: black;
+        @extend .paragraph;
+        color: black !important;
       }
+
     }
 }
