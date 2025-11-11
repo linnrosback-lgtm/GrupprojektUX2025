@@ -116,6 +116,24 @@ body {
 
 /*------FOOTER-----*/
 
-#footer {
+footer {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 8vw;
+  border-top: 1px solid black;
+
+   div {
+    	flex: 1;                  // makes each footer div take equal width (optional)
+      height: 9rem;
+      padding-top: 1rem;
+
+      h2 {
+        padding-bottom: 1rem;
+      }
+
+      a {
+        color: black;
+      }
+    }
 }
