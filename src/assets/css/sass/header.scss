@@ -8,6 +8,7 @@
   display: block;
   margin-left: -5%;
   padding-top: 10px;
+  padding-left: 40px;
 
   /*Breakpoint for when menu can't fit the screen anymore*/
   @media screen and (max-width: 1190px) {
@@ -20,7 +21,7 @@
   /*#header h1*/
   h1 {
     vertical-align: middle;
-    display:inline-block;
+    display: inline-block;
     padding: 0 5%;
     @include size(35, 40);
     margin-bottom: 5px;
@@ -51,7 +52,6 @@
         @include transition(1s); /*Taken fomr mixin.scss*/
 
         li {
-
           &:not(:last-child) {
             float: none;
             display: block !important;
@@ -72,10 +72,10 @@
           }
         }
       }
-    }/*Close @media screen and (max-width: 1190px)*/
+    } /*Close @media screen and (max-width: 1190px)*/
 
     ul {
-      display:block;
+      display: block;
 
       li {
         display: inline-block;
@@ -90,7 +90,7 @@
         }
 
         a.current {
-          color:$link-hover;
+          color: $link-hover;
           border-bottom: 3px solid $link-hover;
           padding-bottom: 16px;
         }
@@ -100,7 +100,7 @@
         }
 
         &.search input#searchInput {
-          background-image: url('../../searchicon.png');
+          background-image: url("../../searchicon.png");
           background-position: 7px 10px;
           background-repeat: no-repeat;
           width: 160px;
@@ -128,18 +128,18 @@
             top: 30px;
 
             a {
-              font-size:20px;
+              font-size: 20px;
             }
           }
-        }/*@media screen and (max-width: 1190px)*/
+        } /*@media screen and (max-width: 1190px)*/
 
         // Smartphones
-        @media (max-width : 870px) {
-         &.icon {
-           top:15px;
-         }
+        @media (max-width: 870px) {
+          &.icon {
+            top: 15px;
+          }
         }
-      }/*Close li*/
+      } /*Close li*/
     } /*Close ul*/
   } /*Close nav#menu*/
 } /*Close #header*/
