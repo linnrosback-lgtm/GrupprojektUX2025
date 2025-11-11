@@ -204,6 +204,16 @@ article#article {
   padding: 0px !important;
   overflow: hidden !important;
 }
+/* QUICK FACTS  */
+
+.quick-facts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
 
 /* GRUPPENS KLASSER */
 
