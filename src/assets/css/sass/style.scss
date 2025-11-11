@@ -118,22 +118,27 @@ body {
 
 footer {
   width: 100%;
+  min-height: 10rem;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 8vw;
+  padding: 2rem clamp(1rem, 5vw, 4rem); 
   border-top: 1px solid black;
+  flex-wrap: wrap;
 
    div {
-    	flex: 1;                  // makes each footer div take equal width (optional)
-      height: 9rem;
+      flex: 1;          // keeps equal widths
+      min-width: 240px;
       padding-top: 1rem;
+      outline: 1px solid red;
 
-      h2 {
+      h3 {
         padding-bottom: 1rem;
       }
 
       a {
-        color: black;
+        @extend .paragraph;
+        color: black !important;
       }
+
     }
 }
