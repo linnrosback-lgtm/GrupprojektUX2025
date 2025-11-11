@@ -65,7 +65,7 @@ body {
 /*----Personkort grid----*/
 
 .team-section {
-  padding: 20px;
+  padding: 50px;
 
   h2 {
     margin-bottom: 2rem;
@@ -88,9 +88,28 @@ body {
         height: 290px;
         object-fit: cover;
       }
+
       h2 {
         margin-bottom: 0rem;
       }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .staff-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .staff-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .staff-grid {
+      grid-template-columns: 1fr;
     }
   }
 }
