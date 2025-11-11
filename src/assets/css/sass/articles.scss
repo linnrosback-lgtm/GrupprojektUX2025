@@ -4,16 +4,16 @@ article#article {
   overflow: hidden;
   position: relative;
   width: 31%;
-  float:left;
+  float: left;
   margin: 10px 1%;
-  max-height:200px;
+  max-height: 200px;
 
   /*Breakpoints for responsive grid system*/
-  @media (min-width : 461px) and (max-width : 870px) {
+  @media (min-width: 461px) and (max-width: 870px) {
     width: 48% !important;
   }
 
-  @media (max-width : 460px) {
+  @media (max-width: 460px) {
     width: 98% !important;
     max-height: none;
   }
@@ -24,14 +24,15 @@ article#article {
     max-height: none;
 
     .info p {
-      color:white;
+      color: white;
     }
 
-    .description, .btn {
-      display:block !important;
+    .description,
+    .btn {
+      display: block !important;
 
       /*Don't show buttons on most articles since it takes a lot of space*/
-      @media (max-width : 460px) {
+      @media (max-width: 460px) {
         display: none !important;
       }
     }
@@ -44,7 +45,7 @@ article#article {
       height: 520px;
 
       /*Make image shorter on mobile phones*/
-      @media (max-width : 460px) {
+      @media (max-width: 460px) {
         max-height: 200px !important;
       }
     }
@@ -61,7 +62,7 @@ article#article {
     border-top: 1px solid $light-grey;
     padding-top: 10px;
     margin-top: 0;
-    height:86px;
+    height: 86px;
 
     .img-link {
       float: left;
@@ -84,7 +85,7 @@ article#article {
       height: 86px;
 
       .date-author {
-        display:none;
+        display: none;
       }
 
       h2 {
@@ -107,9 +108,9 @@ article#article {
   }
 
   .info {
-    width:100%;
+    width: 100%;
     position: absolute;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     bottom: 0;
     clear: both;
@@ -121,17 +122,18 @@ article#article {
     .date-author {
       display: block;
       margin-top: 0;
-      color:white;
+      color: white;
     }
 
     a {
       color: white;
     }
 
-    .description, .btn {
-      display:none;
+    .description,
+    .btn {
+      display: none;
     }
-  }/*Close .info*/
+  } /*Close .info*/
 
   &.hide {
     opacity: 0;
@@ -171,10 +173,10 @@ article#article {
 
       h2 {
         font: {
-          family:$primary-font;
-         	weight: normal;
+          family: $primary-font;
+          weight: normal;
         }
-      	@include size(20, 25);
+        @include size(20, 25);
         transition: none;
       }
 
@@ -187,10 +189,10 @@ article#article {
       }
     } /*Close .info*/
   } /*Close .show*/
-}/*Close #article*/
+} /*Close #article*/
 
 #no-results {
-  display:none;
+  display: none;
   padding: 2% 0;
 }
 
@@ -201,4 +203,18 @@ article#article {
   height: 520px !important;
   padding: 0px !important;
   overflow: hidden !important;
+}
+
+/* GRUPPENS KLASSER */
+
+.about-info {
+  padding: 107 50 107 50;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 20;
+  }
 }
