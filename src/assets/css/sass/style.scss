@@ -49,6 +49,7 @@ body {
 
 .contact-container {
   @include flex-container(column, nowrap, space-between, 50px);
+  justify-content: flex-end;
 
   .quick-facts {
     @include flex-container(row, wrap, space-between, 0);
@@ -64,11 +65,10 @@ body {
     a {
       color: black
     }
-
-    .social-class {
+  }
+  .social-links {
       align-items: bottom;
     }
-  }
 }
 
 @media screen and (max-width: 1024px) {
