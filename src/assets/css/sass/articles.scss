@@ -224,7 +224,7 @@ article#article {
 /* GRUPPENS KLASSER */
 
 .about-info {
-  padding: 50 107 50 107;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -236,7 +236,7 @@ article#article {
 }
 
 .map-wrapper {
-  padding: 50px 107px;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
   max-width: 1200px;
   margin: 0 auto;
 }
