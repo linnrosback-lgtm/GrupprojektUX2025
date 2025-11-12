@@ -27,7 +27,7 @@ p {
     weight: normal;
   }
   margin-top: 10px;
-  @include size(15, 20);
+  @include size(14, 20);
   color: black;
 
   strong,
@@ -78,7 +78,7 @@ h2 {
 
 h3 {
   font-family: $primary-font;
-  font-size: 20px;
+  font-size: 20;
   font-weight: bold;
 }
 
