@@ -28,6 +28,39 @@ body {
   color: black;
 }
 
+
+@media screen and (max-width: 1024px) {
+  /*All Devices*/
+
+  html.touch *:hover {
+    pointer-events: none !important;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    margin: 0px !important;
+    overflow-x: hidden !important;
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+  }
+
+  body {
+    margin: 0 0 20px;
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+#content {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+}
+
+//******---- GRUPPENS CSS ----******//
+
+
 /*----contact heading using mixing ----*/
 // CAN ALSO BE USED IN FOOTER
 
@@ -66,44 +99,82 @@ body {
       color: black
     }
   }
-  
-  .social-links {
-      align-items: bottom;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-  /*All Devices*/
-
-  html.touch *:hover {
-    pointer-events: none !important;
-  }
-
-  html,
-  body {
-    width: 100% !important;
-    margin: 0px !important;
-    overflow-x: hidden !important;
-    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
-  }
-
-  body {
-    margin: 0 0 20px;
-    height: auto;
-    min-height: 100%;
-  }
-}
-
-#content {
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  overflow: hidden;
 }
 
 .hero-img {
   width: 100%;
   max-height: 387px;
+}
+
+/* QUICK FACTS  */
+
+.quick-facts {
+  display: flex;
+  flex-wrap: wrap; /* Gör så att korten kan brytas till flera rader */
+  justify-content: space-between;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
+  gap: 2rem; /* snyggt mellanrum mellan korten */
+
+  card-qf {
+    flex: 1 1 22%; /* 4 per rad ungefär (100 / 4 = 25%) */
+    min-width: 200px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 33px;
+    font-family: var(--primary-font, sans-serif);
+  }
+  p {
+    font-size: 25px;
+    line-height: 33px;
+    font-family: $primary-font;
+  }
+}
+
+/* OUR STORY */
+
+.about-info {
+  padding: 2rem clamp(1rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 20;
+  }
+}
+
+/* MAP */
+
+.map-wrapper {
+  padding: 2rem clamp(1rem, 5vw, 4rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .map-wrapper {
+    padding: 0;
+    width: 100%;
+  }
+  .quick-facts .card-qf {
+    flex: 1 1 45%; /* 2 kort per rad */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .map-wrapper iframe {
+    height: 300px;
+  }
+  .quick-facts {
+    flex-direction: column; /* Kolumnlayout */
+    align-items: left;
+  }
+
+  .quick-facts .card-qf {
+    flex: 1 1 100%;
+    max-width: 400px;
+  }
 }
 
 /*----Personkort grid----*/
