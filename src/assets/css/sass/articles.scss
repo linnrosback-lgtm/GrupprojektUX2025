@@ -209,12 +209,18 @@ article#article {
 .quick-facts {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 2rem;
   padding-top: 2rem;
-}
+  padding: 2rem 7%;
 
+  p {
+    font-size: 25px;
+    line-height: 33px;
+    font-family: $primary-font;
+  }
+}
 /* GRUPPENS KLASSER */
 
 .about-info {
