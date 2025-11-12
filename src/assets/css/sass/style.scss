@@ -45,6 +45,8 @@ body {
   gap: 2rem;
 }
 
+/*Contact cards och quick facts*/
+
 .contact-container {
   @include flex-container(column, nowrap, space-between, 50px);
 
@@ -57,6 +59,14 @@ body {
     h3 {
       font-style: normal;
       padding-bottom: 1rem;
+    }
+
+    a {
+      color: black
+    }
+
+    .social-class {
+      align-items: bottom;
     }
   }
 }
