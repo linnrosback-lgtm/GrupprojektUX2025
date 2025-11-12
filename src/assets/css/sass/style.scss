@@ -98,7 +98,7 @@ body {
 /*----Personkort grid----*/
 
 .team-section {
-  padding: 50px;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
 
   h2 {
     font-size: 20px;
@@ -110,10 +110,10 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 20px;
     text-align: start;
-    justify-items: center;
-    align-items: start;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20;
 
     article {
       max-width: 180px;
