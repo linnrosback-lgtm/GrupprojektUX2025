@@ -210,7 +210,6 @@ article#article {
   display: flex;
   flex-wrap: wrap; /* Gör så att korten kan brytas till flera rader */
   justify-content: space-between;
-  align-items: center;
   padding: 2rem clamp(1rem, 5vw, 4rem);
   gap: 2rem; /* snyggt mellanrum mellan korten */
 
