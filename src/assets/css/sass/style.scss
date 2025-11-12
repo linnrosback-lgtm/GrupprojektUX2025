@@ -35,7 +35,7 @@ body {
   $direction: row,
   $wrap: wrap,
   $justify: space-between,
-  $padding: 2rem
+  $padding: 2rem clamp(1rem, 5vw, 4rem)
 ) {
   display: flex;
   flex-direction: $direction;
@@ -48,11 +48,11 @@ body {
 /*Contact cards och quick facts*/
 
 .contact-container {
-  @include flex-container(column, nowrap, space-between, 50px);
-  justify-content: flex-end;
+  @include flex-container(column, nowrap, space-between);
 
   .quick-facts {
     @include flex-container(row, wrap, space-between, 0);
+    align-items: end;
   }
 
   address {
@@ -66,6 +66,7 @@ body {
       color: black
     }
   }
+  
   .social-links {
       align-items: bottom;
     }
@@ -118,15 +119,16 @@ body {
 
   .staff-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
+    place-items: center;
     text-align: start;
-    justify-content: space-between;
-    align-items: center;
     gap: 20;
 
     article {
-      max-width: 180px;
+      max-width: 100%;
+      height: 340px;
+      min-width: 175px;
 
       img {
         width: 100%;
