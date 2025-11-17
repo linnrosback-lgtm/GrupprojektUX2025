@@ -60,9 +60,8 @@ body {
 //******---- GRUPPENS CSS ----******//
 
 /*----contact heading using mixing ----*/
-// CAN ALSO BE USED IN FOOTER
 
-@mixin flex-container(
+@mixin flex-horisontal(
   $direction: row,
   $wrap: wrap,
   $justify: space-between,
@@ -76,30 +75,33 @@ body {
   gap: 2rem;
 }
 
-/*Contact cards och quick facts*/
+/*Contact container och contact cards*/
 
 .contact-container {
-  @include flex-container(column, nowrap, space-between);
+  @include flex-horisontal(column, nowrap, space-between);
 
   h2 {
     font-family: $primary-font;
     @include size(30, 40);
   }
 
-  .quick-facts {
-    @include flex-container(row, wrap, space-between, 0);
+  .contact-block {
+    @include flex-horisontal(row, wrap, space-between, 0);
     align-items: end;
   }
 
-  address {
-    font-style: normal; // reset default italics
+  .contact-card {
     h3 {
       font-style: normal;
       padding-bottom: 2rem;
     }
 
-    a {
-      color: black;
+    address {
+      font-style: normal; // reset default italics
+
+      a {
+        color: black;
+      }
     }
   }
 }
@@ -112,11 +114,9 @@ body {
 /* QUICK FACTS  */
 
 .quick-facts {
-  display: flex;
-  flex-wrap: wrap; /* Gör så att korten kan brytas till flera rader */
-  justify-content: space-between;
-  padding: 2rem clamp(1rem, 5vw, 4rem);
-  gap: 2rem; /* snyggt mellanrum mellan korten */
+  @include flex-horisontal(row, wrap, space-between, 0);
+  padding: 4rem clamp(1rem, 5vw, 4rem);
+  gap: 2rem;
 
   card-qf {
     flex: 1 1 auto;
