@@ -214,26 +214,42 @@ body {
 /*------FOOTER-----*/
 
 footer {
+  box-sizing: border-box;
   width: 100%;
   min-height: 10rem;
   display: flex;
-  justify-content: space-between;
+  align-items: start;
   padding: 2rem clamp(1rem, 5vw, 4rem);
   border-top: 1px solid black;
   flex-wrap: wrap;
+  align-items: flex-start; 
 
-  div {
-    flex: 1; // keeps equal widths
+  /* target only direct children */
+  > div {
+    /* allow them to size to content but wrap when needed */
+    flex: 0 1 auto;     // <- don't force equal widths anymore
     min-width: 240px;
     padding-top: 1rem;
 
-    h3 {
-      padding-bottom: 2rem;
-    }
+    h3 { padding-bottom: 2rem; }
+    a { @extend .paragraph; color: black !important; }
+  }
 
-    a {
-      @extend .paragraph;
-      color: black !important;
+  /* push the last div to the far right */
+  > div:last-child {
+    margin-left: auto; /* ensure it doesn't stretch */
+    padding-top: 0rem;
+    flex: 0 0 auto;
+  }
+
+@media (max-width: 1100px) {
+    > div:last-child {
+      margin-left: 0;      // left-align on small screens
+      width: 100%;         // optional: span full width
+      margin-top: 2rem;    // add spacing from previous row
     }
   }
+
 }
+
+
